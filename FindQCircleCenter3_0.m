@@ -7,7 +7,7 @@ clear;close all;
 % 拟合圆心
 % 输出：FF初始像素位置
 addpath('function');
-F_N='data/211213_155119_00_000_00_xy.txt';%把相机txt文件名称复制进去
+F_N='data/211225_161853_00_000_00_xy.txt';%把相机txt文件名称复制进去
 sortRows=21; % 排序行数（所有光纤的行数
 FFNum=36; % 参考光纤数量
 findStep=5;%同心圆搜索光纤 步长
@@ -42,7 +42,7 @@ plot(G_D_x,G_D_y,'.b');title('\fontname{宋体} 初始拟合微米')
 %                end
 %             end
 allPointX=[px';nux'];allPointY=[py';nuy'];
-FFLiLun=load('FFLilun_LL.txt');
+FFLiLun=load('data\FFLilun_LL.txt');
 figure(2)
 plot(allPointX,allPointY,'.b');title('\fontname{宋体} .点为像素')
 % axis([-3000, 3000, -3000, 3000]);

@@ -2,10 +2,10 @@
 clear;close all;
 addpath(pwd);
 dataDir='.\data';
-subDir1='211213_164317_cen_6300';
-subDir2='211213_163552_ecc_5000';
+subDir1='211224_172744_cen_6300';
+subDir2='211224_173317_ecc_4800';
 biaoding=20;
-%% 读取FF理论坐标
+%% 读取FF理论坐标s
 FFLilun=load('data/FFLilun_LL.txt');
 %% 读取单元数量与名称
 subDir=subDir1;
@@ -126,7 +126,7 @@ canshu_data=[cen_center_xyr(:,1),cen_center_xyr(:,2),cen_l,ecc_l,cen_angle,ecc_a
 unitP=unit(1:Pnum,:);
 badUnit=[];
 for i=Pnum:-1:1
-    if canshu_data(i,3)<6250 || canshu_data(i,4)<6250 || canshu_data(i,3)>8500 || canshu_data(i,4)>8500
+    if canshu_data(i,3)<6250 || canshu_data(i,4)<6250 || canshu_data(i,3)>8700 || canshu_data(i,4)>8700
         badUnit=[badUnit;unitP(i,:)];
         canshu_data(i,:)=[];unitP(i,:)=[];
 %         canshu_data(i,3:6)=[8000,8000,0,0];
